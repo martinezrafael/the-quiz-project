@@ -89,20 +89,17 @@ body {
     padding: 10px 0;
 }
 
-.questionAlternatives > input {
-    margin-left: 12px;
-}
-
-.questionAlternatives > input:first-child {
-    margin-left: 0;
-}
 
 #btnSendAnswers {
     background-color: #fccd07;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    color: #000;
+    display: inline-block;
     font-size: 16px;
     padding: 10px;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
 }
