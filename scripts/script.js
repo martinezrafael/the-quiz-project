@@ -28,7 +28,7 @@ const sectionElement = document.createElement("section");
 sectionElement.className = "questions";
 
 sectionElement.innerHTML = `<h2 class="title">Bem vindo ao the quiz</h2>
-<p class="initialDescription">Esse é um jogo baseado na newsletter do site <a href="https://thenewscc.com.br/">https://thenewscc.com.br/</a> onde você pode se divertir e se manter atualizado ao mesmo tempo! Boa sorte!</p>`
+<p class="initialDescription">Esse é um jogo baseado na newsletter do site <a href="https://thenewscc.com.br/" target="_blank">https://thenewscc.com.br/</a> onde você pode se divertir e se manter atualizado ao mesmo tempo! Boa sorte!</p>`
 
 //criar uma div com a class questionsContainer onde ficarão todas as perguntas listadas
 const questionsContainer = document.createElement("div");
