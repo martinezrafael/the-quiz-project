@@ -47,6 +47,14 @@ body {
 
 /* questions */
 
+.title {
+    margin-bottom: 1em;
+}
+
+.initialDescription {
+    margin-bottom: 32px;
+}
+
 .questions {
     background-color: #fff;
     width: 60%;
