@@ -13,16 +13,11 @@ sectionElement.innerHTML = `<h2 class="title">Bem vindo ao the quiz</h2>
 const questionsContainer = document.createElement("div");
 questionsContainer.className = "questionsContainer";
 
-const questionAlternatives = document.createElement("div");
-questionAlternatives.className = "questionAlternatives";
-
 //coloca a section de perguntas dentro do body
 bodyElement.appendChild(sectionElement);
 
 //coloca o container de perguntas dentro da section de perguntas
 sectionElement.appendChild(questionsContainer);
-
-questionsContainer.appendChild(questionAlternatives);
 
 //cria array de perguntas
 const questions = [
@@ -30,7 +25,7 @@ const questions = [
         questionDescription: "Pergunta número 1",
         answers: ["resposta 1", "resposta 2", "resposta 3"],
         //aqui indica qual é o índice da reposta correta
-        answerCorrect: 'alternative-0'
+        answerCorrect: 'alternative-2'
     },
     {
         questionDescription: "Pergunta número 2",
@@ -72,16 +67,17 @@ let score = 0;
 function checkAnswer(event) {
     let targetAnswer = event.target;
 
-    let answerClick = targetAnswer.className.split(' ')[0];
-    console.log(`resposta clicada ${answerClick}`);
+    let answerClick = targetAnswer.className.split(' ')[0]; //alternative-indice
+    console.log(answerClick);
 
-    let questionClick = targetAnswer.className.split(' ')[1].split('-')[1];
-    console.log(`Qual a pergunta ${questionClick}`);
-    
-    
+    let questionClick = targetAnswer.className.split(' ')[1].split('-')[1]; //indice pergunta
+    console.log(questionClick);
+
     
 
 }
+
+
 
 
 //isso deve ser disparado quando clicar na ultima pergunta
