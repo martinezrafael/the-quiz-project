@@ -8,7 +8,6 @@ sectionElement.className = "questions";
 //coloca o título e a descrição inicial antes das perguntas
 sectionElement.innerHTML = `<h2 class="title">Bem vindo ao the quiz</h2>
 <p class="initialDescription">Esse é um jogo baseado na newsletter do site <a href="https://thenewscc.com.br/" target="_blank">https://thenewscc.com.br/</a> onde você pode se divertir e se manter atualizado ao mesmo tempo! Boa sorte!</p>`;
-
 //cria uma div onde ficarão todas as perguntas listadas
 const questionsContainer = document.createElement("div");
 questionsContainer.className = "questionsContainer";
@@ -19,24 +18,77 @@ bodyElement.appendChild(sectionElement);
 //coloca o container de perguntas dentro da section de perguntas
 sectionElement.appendChild(questionsContainer);
 
+const btnSendAnswers = document.createElement('button');
+btnSendAnswers.className = 'btnSendAnswer';
+btnSendAnswers.innerText = 'Enviar Respostas';
+btnSendAnswers.setAttribute('onclick', 'sendAnswer()');
+btnSendAnswers.style.width = '100%';   
+btnSendAnswers.style.padding = '10px';   
+btnSendAnswers.style.backgroundColor = '#fccd07';   
+btnSendAnswers.style.border = 'none';   
+
+sectionElement.appendChild(btnSendAnswers);
+
 //cria array de perguntas
 const questions = [{
-        questionDescription: "Pergunta número 1",
-        answers: ["resposta 1", "resposta 2", "resposta 3"],
+        questionDescription: "O Spotify criou uma nova funcionalidade para os usuários avaliarem seus episódios e shows favoritos, qual é o objetivo por traz da estratégia da empresa?",
+        answers: ["Otimizar as recomendações de sua plataforma", "Arrumar briga com a Apple", "Bater de frente com o Youtube"],
         //aqui indica qual é o índice da reposta correta
-        answerCorrect: "alternative-2",
+        answerCorrect: "alternative-0",
     },
     {
-        questionDescription: "Pergunta número 2",
-        answers: ["resposta 21", "resposta 22", "resposta 23"],
+        questionDescription: "Qual foi a empresa que vendeu U$30 bilhões em tênis no ano de 2021?",
+        answers: ["Nike", "Adidas", "Kichute"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-0",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
         //aqui indica qual é o índice da reposta correta
         answerCorrect: "alternative-1",
     },
     {
-        questionDescription: "Pergunta número 3",
-        answers: ["resposta 31", "resposta 32", "resposta 33"],
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
         //aqui indica qual é o índice da reposta correta
-        answerCorrect: "alternative-2",
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
+    },
+    {
+        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
+        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        //aqui indica qual é o índice da reposta correta
+        answerCorrect: "alternative-1",
     },
 ];
 
@@ -85,15 +137,41 @@ function checkAnswer(event) {
         score += 10;
     }
 
-    showScore(score);
+    if (questions[3].answerCorrect === answerClick && questionClick === "3") {
+        score += 10;
+    }
+
+    if (questions[4].answerCorrect === answerClick && questionClick === "4") {
+        score += 10;
+    }
+
+    if (questions[5].answerCorrect === answerClick && questionClick === "5") {
+        score += 10;
+    }
+
+    if (questions[6].answerCorrect === answerClick && questionClick === "6") {
+        score += 10;
+    }
+
+    if (questions[7].answerCorrect === answerClick && questionClick === "7") {
+        score += 10;
+    }
+
+    if (questions[8].answerCorrect === answerClick && questionClick === "8") {
+        score += 10;
+    }
+
+    if (questions[9].answerCorrect === answerClick && questionClick === "9") {
+        score += 10;
+    }
 }
 
 function showScore(score) {
     let scoreElement = document.createElement("h2");
     scoreElement.className = "score";
 
-    if (score < 0) {
-        scoreElement.innerText += `Erro!`;
+    if (score < 0 || score > 100) {
+        return;
     } else if (score >= 0 && score < 70) {
         scoreElement.innerText += `Você fez ${score} pontos, tente novamente!`;
     } else if (score >= 70) {
@@ -103,4 +181,8 @@ function showScore(score) {
     sectionElement.appendChild(scoreElement);
 
     return scoreElement;
+}
+
+function sendAnswer() {
+    showScore(score);
 }

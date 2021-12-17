@@ -99,7 +99,7 @@ body {
 }
 
 
-#btnSendAnswers {
+.btnSendAnswers {
     background-color: #fccd07;
     border: none;
     border-radius: 6px;
