@@ -73,35 +73,21 @@ function checkAnswer(event) {
     let questionClick = targetAnswer.className.split(' ')[1].split('-')[1]; //indice pergunta
     console.log(questionClick);
 
-    
-
-}
-
-
-
-
-//isso deve ser disparado quando clicar na ultima pergunta
-function showScore () {
-    if (score > 0 && score < 70) {
-
-        let resultContainer = document.createElement('div');
-        resultContainer.innerHTML += `<h3>Você fez ${score} pontos, não foi o suficiente! Tente outra vez.</h3>`
-        sectionElement.appendChild(resultContainer);
-    
-    } else if (score <= 100) {
-    
-        let resultContainer = document.createElement('div');
-        resultContainer.innerHTML += `<h3>Parabéns! Você fez ${score} pontos e venceu!!</h3>`
-        sectionElement.appendChild(resultContainer);
-    
-    } else {
-    
-        let resultContainer = document.createElement('div');
-        resultContainer.innerHTML += `<h3>Ocorreu um erro!</h3>`
-        sectionElement.appendChild(resultContainer);
-    
+    if (questions[0].answerCorrect === answerClick && questionClick === '0') {
+        score += 10;
     }
+
+    if (questions[1].answerCorrect === answerClick && questionClick === '1') {
+        score += 10;
+    }
+
+    if (questions[2].answerCorrect === answerClick && questionClick === '2') {
+        score += 10;
+    }
+    
+   
 }
+
 
 
 
