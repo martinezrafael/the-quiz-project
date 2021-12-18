@@ -57,7 +57,7 @@ body {
 }
 
 .initialDescription {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 }
 
 .questions {
@@ -119,5 +119,5 @@ body {
 }
 
 .score {
-    padding: 40px;
+    padding: 60px 0;
 }

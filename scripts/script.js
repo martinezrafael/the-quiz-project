@@ -9,7 +9,7 @@ header.innerHTML += `
     <div class='headerContainer'>
 
         <h2>the<span>quiz</span></h2>
-        <a href='#'>fale comigo</a>
+        <a href='https://api.whatsapp.com/send?phone=5513982166495&text=Ol%C3%A1!%20fiquei%20com%20algumas%20d%C3%BAvidas%20sobre%20o%20jogo%2C%20voc%C3%AA%20poderia%20me%20ajudar%3F' target='_blank'>fale comigo</a>
     
     </div>
 `;
@@ -21,12 +21,11 @@ const sectionElement = document.createElement("section");
 sectionElement.className = "questions";
 sectionElement.innerHTML += `
 
-    <h2 class='title'>Bem vindo ao the quiz</h2>
+    <h2 class='title'>Bem vindo ao the quiz!</h2>
 
     <p class='initialDescription'>
-        Esse é um jogo baseado na newsletter do site <a href="https://thenewscc.com.br/" target="_blank">https://thenewscc.com.br/</a> onde você pode se divertir e se manter atualizado ao mesmo tempo! Boa sorte!
+        Esse é um jogo baseado na newsletter do site <a href="https://thenewscc.com.br/" target="_blank">https://thenewscc.com.br/</a>.Uma forma divertida de testar o quanto você está por dentro das news!
     </p>
-
 `;
 
 bodyElement.appendChild(sectionElement);
