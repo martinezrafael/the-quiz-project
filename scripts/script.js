@@ -122,11 +122,14 @@ function checkAnswer(event) {
     let answerClick = targetAnswer.className.split(" ")[0]; //indice da resposta clicada
     let questionClick = targetAnswer.className.split(" ")[1].split("-")[1]; //indice pergunta
 
-    if(targetAnswer) {
-        targetAnswer.style.pointerEvents = 'none';
-        targetAnswer.style.cursor = 'none';
-        targetAnswer.style.backgroundColor = '#ddd';
+  
+    if (targetAnswer) {
+       let answerParent =  targetAnswer.parentElement;
+       answerParent.style.pointerEvents = 'none';
+       answerParent.style.cursor = 'none';
+       targetAnswer.style.backgroundColor = '#FDFF8F'
     }
+
 
     // verifica as perguntas
     if (questions[0].answerCorrect === answerClick && questionClick === "0") {
@@ -159,10 +162,10 @@ function showScore(score) {
 
     if (score < 0 || score > 100) {
         return;
-    } else if (score > 0 && score < 70) {
-        scoreElement.innerText += `Você fez ${score} pontos, tente novamente!`;
+    } else if (score >= 0 && score < 70) {
+        scoreElement.innerText += `Você fez ${score} pontos, tente novamente! 😞`;
     } else if (score >= 70) {
-        scoreElement.innerText += `Parabéns, você fez ${score} pontos e venceu!`;
+        scoreElement.innerText += `Parabéns, você fez ${score} pontos e venceu! 😀`;
     }
 
     sectionElement.appendChild(scoreElement);
@@ -170,13 +173,21 @@ function showScore(score) {
     return scoreElement;
 }
 
-function sendAnswer() {
+function sendAnswer(event) {
+    btnClick = event.target;
+
+    if (btnClick) {
+        btnClick.style.pointerEvents = 'none';
+        btnClick.style.cursor = 'none';
+        btnClick.style.backgroundColor = '#ddd'
+        btnClick.style.color = '#fff';
+    }
     showScore(score);
-    return;
 }
+
 
 
 // botão que dispara a pontuação na tela
 sectionElement.innerHTML += `
-    <button class='btnSendAnswers' onclick='sendAnswer()'>Enviar Respostas</button>
+    <button class='btnSendAnswers' onclick='sendAnswer(event)'>Enviar Respostas</button>
 `
