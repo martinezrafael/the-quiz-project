@@ -8,7 +8,7 @@ header.className = "header";
 header.innerHTML += `
     <div class='headerContainer'>
 
-        <h2>the quiz</h2>
+        <h2>the<span>quiz</span></h2>
         <a href='#'>fale comigo</a>
     
     </div>
@@ -19,7 +19,6 @@ bodyElement.appendChild(header);
 //seção de perguntas do site
 const sectionElement = document.createElement("section");
 sectionElement.className = "questions";
-
 sectionElement.innerHTML += `
 
     <h2 class='title'>Bem vindo ao the quiz</h2>
@@ -58,38 +57,38 @@ const questions = [{
         answerCorrect: "alternative-1",
     },
     {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        questionDescription: "Qual série da HBO fez a empresa Peloton de esteiras e equipamentos para exercícios físicos, perder U$2 bi em valor de mercado?",
+        answers: ["And Just Like That", "Gossip Girl", "Friends"],
+        answerCorrect: "alternative-0",
+    },
+    {
+        questionDescription: "Qual é o nome do aplicativo anunciado recentemente por Mark Zuckerberg, que possibilita criar o seu avatar para o Metaverso?",
+        answers: ["Spark AR Go", "Spark TO Go", "Meta GO"],
+        answerCorrect: "alternative-0",
+    },
+    {
+        questionDescription: "Qual foi o volume de dados sequestrados do ministério da saúde no último ataque hacker que o orgão sofreu?",
+        answers: ["100 terabytes", "50 terabytes", "50 gigabytes"],
         answerCorrect: "alternative-1",
     },
     {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        questionDescription: "Após abrir capital na bolsa de NY e se tornar o banco mais valioso da América Latina, o Nubank foi avaliado em:",
+        answers: ["U$1 Bilhão", "U$20 Milhões", "U$41,5 bilhões"],
+        answerCorrect: "alternative-2",
+    },
+    {
+        questionDescription: "Estudo sugere relação entre Viagra e prevenção de uma doença muito popular, qual seria essa doença?",
+        answers: ["Cancêr", "Alzheimer", "Parkinson"],
         answerCorrect: "alternative-1",
     },
     {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        questionDescription: "Qual é o percentual de não vacinados mortos por COVID-19 no Brasil?",
+        answers: ["50%", "80%", "75%"],
         answerCorrect: "alternative-1",
     },
     {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
-        answerCorrect: "alternative-1",
-    },
-    {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
-        answerCorrect: "alternative-1",
-    },
-    {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
-        answerCorrect: "alternative-1",
-    },
-    {
-        questionDescription: "Qual é a cidade mais cara do mundo para ser viver em 2021?",
-        answers: ["São Paulo (Brasil)", "Tel Aviv (Israel)", "Tokio (Japão)"],
+        questionDescription: "Na Índia, pessoas poderam usar um app de mensagens para pedir um Uber, qual é o nome desse App?",
+        answers: ["Facebook Messenger", "WhatsApp", "Telegram"],
         answerCorrect: "alternative-1",
     },
 ];

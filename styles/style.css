@@ -35,6 +35,11 @@ body {
 
 .headerContainer > h2 {
     color: #fccd07;
+    font-size: 36px;
+}
+
+.headerContainer > h2 > span {
+    font-size: 26px;
 }
 
 .headerContainer a {
