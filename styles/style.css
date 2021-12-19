@@ -120,7 +120,12 @@ body {
     padding: 60px 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+
+    .header {
+        background-color: #efefef;
+        padding: 32px 0;
+    }
 
     .header__container {
         flex-direction: column;
@@ -144,6 +149,44 @@ body {
     .header__container > a {
         padding: 12px;
         font-size: 18px;
+    }
+
+
+    .questions {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 18px;
+    }
+
+    .question {
+        border: none;
+        border-radius: 6px;
+        font-size: 24px;
+        margin-bottom: 42px;
+        padding: 0;
+    }
+
+    .alternativeList li,
+    .btnSendAnswers {
+        border: 1px solid #ddd;
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 18px;
+   
+    }
+
+    .btnSendAnswers {
+        font-size: 24px;
+    }
+
+
+    .title {
+        font-size: 42px;
+    }
+
+    .initialDescription {
+        font-size: 32px;
     }
 
 }
