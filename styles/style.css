@@ -21,10 +21,9 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     padding: 10px 0;
     width: 100%;
-    top: 0;
 }
 
-.headerContainer {
+.header__container {
     margin: auto;
     width: 90%;
 
@@ -33,16 +32,16 @@ body {
     justify-content: space-between;
 }
 
-.headerContainer > h2 {
+.header__container > h2 {
     color: #fccd07;
     font-size: 36px;
 }
 
-.headerContainer > h2 > span {
+.header__container > h2 > span {
     font-size: 26px;
 }
 
-.headerContainer a {
+.header__container a {
     background-color: #fccd07;
     border-radius: 6px;
     color: #000;
@@ -51,7 +50,6 @@ body {
 }
 
 /* questions */
-
 .title {
     margin-bottom: 1em;
 }
@@ -120,4 +118,32 @@ body {
 
 .score {
     padding: 60px 0;
+}
+
+@media screen and (max-width: 500px) {
+
+    .header__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header__container > h2,
+    .header__container > a {
+        margin-bottom: 20px;
+    }
+
+    .header__container > h2 {
+        font-size: 56px;
+    }
+
+    .header__container > h2 > span {
+        font-size: 46px;
+    }
+
+    .header__container > a {
+        padding: 12px;
+        font-size: 18px;
+    }
+
 }

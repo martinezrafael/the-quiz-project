@@ -2,11 +2,10 @@
 const bodyElement = document.getElementsByTagName("body")[0];
 
 // header
-
 const header = document.createElement("header");
 header.className = "header";
 header.innerHTML += `
-    <div class='headerContainer'>
+    <div class='header__container'>
 
         <h2>the<span>quiz</span></h2>
         <a href='https://api.whatsapp.com/send?phone=5513982166495&text=Ol%C3%A1!%20fiquei%20com%20algumas%20d%C3%BAvidas%20sobre%20o%20jogo%2C%20voc%C3%AA%20poderia%20me%20ajudar%3F' target='_blank'>fale comigo</a>
@@ -178,7 +177,7 @@ function sendAnswer(event) {
     if (btnClick) {
         btnClick.style.pointerEvents = 'none';
         btnClick.style.cursor = 'none';
-        btnClick.style.backgroundColor = '#ddd'
+        btnClick.style.backgroundColor = '#ddd';
         btnClick.style.color = '#fff';
     }
     showScore(score);
