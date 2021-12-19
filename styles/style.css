@@ -157,7 +157,7 @@ body {
         width: 100%;
         margin: auto;
         padding: 18px;
-    }
+    }   
 
     .question {
         border: none;
@@ -167,26 +167,28 @@ body {
         padding: 0;
     }
 
+    .questionDescription {
+        font-size: 24px;
+    }
+
     .alternativeList li,
     .btnSendAnswers {
         border: 1px solid #ddd;
         cursor: pointer;
         margin-bottom: 10px;
-        padding: 18px;
-   
     }
 
     .btnSendAnswers {
-        font-size: 24px;
+        font-size: 18px;
     }
 
 
     .title {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .initialDescription {
-        font-size: 32px;
+        font-size: 24px;
     }
 
 }
